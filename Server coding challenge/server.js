@@ -8,7 +8,7 @@ const {Actors} = require('./models/actor-model')
 const errorHandler = require('./middleware/errorHandler')
 const app = express();
 
-app.get('/api/add-movie-actor/:movie_ID',jsonParser,(req,res)=>{
+app.patch('/api/add-movie-actor/:movie_ID',jsonParser,(req,res)=>{
     const id = req.params.movie_ID
     const idBody = req.body.movie_ID
     const firstName = req.body.firstName
